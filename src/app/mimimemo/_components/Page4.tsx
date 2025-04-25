@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function Page4() {
   return (
     <div className="bg-gradient-to-r from-pink-200 to-pink-400 rounded-xl p-10 text-white max-w-4xl mx-auto shadow-lg">
