@@ -32,7 +32,7 @@ export default function Layout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="w-full overflow-y-scroll relative ps-10">
+    <div className="w-full relative px-[15vw] box-border">
       <Header />
       {children}
     </div>

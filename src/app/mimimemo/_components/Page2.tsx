@@ -6,7 +6,7 @@ const FeatureCard = ({
   description: string;
 }) => {
   return (
-    <div className="rounded-xl shadow-md bg-white px-6 py-8 flex flex-col items-start gap-4 hover:shadow-lg transition">
+    <div className="w-full h-full rounded-xl shadow-md bg-white px-6 py-8 flex flex-col items-start gap-4 hover:shadow-lg transition">
       {/* <Image src="/icon.svg" alt="icon" className="w-10 h-10" /> */}
       <h3 className="text-lg font-semibold text-gray-900">{title}</h3>
       <p className="text-sm text-gray-500">{description}</p>
@@ -49,7 +49,7 @@ const features = [
 
 export default function Page2() {
   return (
-    <div className="w-full flex flex-col justify-start align-middle">
+    <div className="w-full flex flex-col justify-start align-middle text-center">
       <h2>🎀 What MimiMemo Can Do 🎀</h2>
       <div className="w-10 h-1 bg-black" />
       <p>
