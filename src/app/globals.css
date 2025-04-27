@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 @layer base {
   html,
@@ -17,5 +15,14 @@
   * {
     -ms-overflow-style: none;
     scrollbar-width: none;
+  }
+
+  button {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background: rgb(247, 151, 167);
+    color: white;
+    cursor: pointer;
   }
 }
