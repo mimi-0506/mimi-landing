@@ -5,7 +5,7 @@ import Page4 from "./_components/Page4";
 
 export default function MimiMemo() {
   return (
-    <div className="w-full relative ps-10 flex flex-col gap-[100px]">
+    <div className="w-full relative ps-10 flex flex-col pb-[200px]">
       <Page1 />
       <Page2 />
       <Page3 />

@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Nanum_Myeongjo, Song_Myung } from "next/font/google";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+export const myeongjo = Nanum_Myeongjo({
+  weight: "400",
+  variable: "--font-myeongjo",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+export const songMyung = Song_Myung({
+  weight: "400",
+  variable: "--font-songmyung",
 });
 
 export const metadata: Metadata = {
@@ -24,11 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <body className={`${myeongjo.variable}`}>{children}</body>
     </html>
   );
 }

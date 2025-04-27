@@ -1,10 +1,15 @@
-import type { Config } from "tailwindcss";
+import { type Config } from "tailwindcss";
 
 const config: Config = {
-  content: ["./src/**/*.{ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        myeongjo: ["var(--font-myeongjo)", "serif"],
+        songmyung: ["var(--font-songmyung)", "serif"],
+      },
+    },
   },
+  content: ["./src/**/*.{js,ts,jsx,tsx}"],
   plugins: [],
 };
 
