@@ -28,8 +28,13 @@ export default function Header() {
 
   return (
     <header
-      className={`${songmyung.className} w-full flex justify-between items-center sticky
-     mt-10 pt-10 z-10 top-0 bg-white`}
+      className={`${songmyung.className} flex justify-between items-center 
+      top-0 z-10 
+      w-full
+      aboslute md:sticky
+      pt-3
+      sm:pt-10
+      md:mt-10`}
     >
       <div className="flex items-center gap-2">
         <Image
@@ -40,8 +45,8 @@ export default function Header() {
         />
         <span className="text-xl tracking-tighter font-bold">MimiMemo</span>
       </div>
-      <nav>
-        <ul className="flex justify-between gap-[30px] list-none">
+      <nav className="hidden sm:block">
+        <ul className="flex justify-between gap-5 list-none">
           {MENU_ITEMS.map((item, idx) => (
             <li
               key={idx}

@@ -32,7 +32,7 @@ export default function Layout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="w-full relative px-[15vw] box-border">
+    <div className="w-full relative px-[3vw] md:px-[15vw]">
       <Header />
       {children}
     </div>
