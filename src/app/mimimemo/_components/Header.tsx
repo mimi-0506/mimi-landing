@@ -1,6 +1,6 @@
 export default function Header() {
   return (
-    <header className="w-full flex justify-between items-center sticky mt-[100px] z-10 top-0">
+    <header className="w-full flex justify-between items-center sticky mt-10 pt-10 z-10 top-0">
       <div>mimimemo</div>
       <nav>
         <ul className="flex justify-between gap-[30px] list-none">
