@@ -24,5 +24,10 @@
     background: rgb(250, 178, 190);
     color: white;
     cursor: pointer;
+    font-weight: bolder;
+  }
+
+  button:hover {
+    background: rgb(239, 149, 169);
   }
 }
