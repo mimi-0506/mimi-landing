@@ -41,7 +41,7 @@ const FeatureCard = ({
   description: string;
 }) => {
   return (
-    <div className="rounded-xl text-left shadow-gray-200 shadow-2xl px-6 py-8 flex flex-col items-start gap-4">
+    <div className="rounded-xl text-left box-pink-shadow px-6 py-8 flex flex-col items-start gap-4">
       {/* <Image src="/icon.svg" alt="icon" className="w-10 h-10" /> */}
       <h3 className={`${songmyung.className} text-xl font-semibold`}>
         {title}

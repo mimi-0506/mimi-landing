@@ -33,13 +33,28 @@
 }
 
 @theme {
+  --color-lightMain: rgb(255, 219, 227);
   --color-main: rgb(250, 178, 190);
   --color-darkMain: rgb(239, 149, 169);
+  --gradient-main: linear-gradient(
+    135deg,
+    var(--color-main),
+    var(--color-darkMain)
+  );
 }
 
 @layer utilities {
   .text-glow {
     text-shadow: 0 0 1px white, 0 0 2px white, 0 0 3px white, 0 0 1px white,
       0 0 2px white, 0 0 3px white, 0 0 1px white, 0 0 2px white, 0 0 3px white;
+  }
+
+  .box-glow {
+    box-shadow: -5px -5px 15px var(--color-lightMain),
+      5px 5px 15px var(--color-darkMain);
+  }
+
+  .box-pink-shadow {
+    box-shadow: 0 0 10px var(--color-lightMain);
   }
 }

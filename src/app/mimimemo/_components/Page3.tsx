@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Page3() {
   return (
-    <div className="w-full min-h-screen flex flex-col gap-50 relative top-20">
+    <div className="w-full min-h-screen flex flex-col gap-20 relative top-20">
       <div className="w-full flex flex-col sm:flex-row justify-center items-center gap-10">
         <div className="relative w-[50vw] sm:w-[20vw] aspect-square">
           <Image
