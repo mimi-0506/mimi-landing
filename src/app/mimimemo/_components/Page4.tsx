@@ -7,7 +7,7 @@ import VelogIcon from "@/assets/velog.svg";
 export default function Page4() {
   return (
     <div className="w-full h-screen flex justify-center items-center">
-      <div className="w-full py-15 bg-pink-100 text-white stroke-white fill-white rounded-3xl box-border p-10 flex flex-col justify-center items-center">
+      <div className="w-full py-15 bg-main text-white stroke-white fill-white rounded-3xl box-border p-10 flex flex-col justify-center items-center">
         <h2 className="text-center text-2xl font-semibold mb-6">Developer</h2>
         <div className="w-40 mb-10 h-0.5 bg-white" />
         <div className="flex justify-around w-full">
