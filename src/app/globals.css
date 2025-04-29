@@ -32,6 +32,11 @@
   }
 }
 
+@theme {
+  --color-main: rgb(250, 178, 190);
+  --color-darkMain: rgb(239, 149, 169);
+}
+
 @layer utilities {
   .text-glow {
     text-shadow: 0 0 1px white, 0 0 2px white, 0 0 3px white, 0 0 1px white,
