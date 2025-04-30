@@ -2,6 +2,7 @@ import { songmyung } from "@/fonts";
 import Image from "next/image";
 import MacIcon from "@/assets/mac.svg";
 import WindowIcon from "@/assets/window.svg";
+import Link from "next/link";
 
 export default function Page1() {
   return (
@@ -19,14 +20,24 @@ export default function Page1() {
           </p>
 
           <div className="flex mt-10 sm:mt-0 gap-5 fill-white text-xl">
-            <button className="w-1/2 lg:w-50 flex justify-center items-center gap-2">
+            <Link
+              href=""
+              download
+              className="w-1/2 lg:w-50 flex justify-center items-center gap-2"
+            >
               <WindowIcon />
               Window
-            </button>
-            <button className="w-1/2 lg:w-50 flex justify-center items-center gap-2">
+            </Link>
+            <Link
+              href={
+                "https://github.com/mimi-0506/mimi-memo/releases/download/untagged-964e41c7617929a6943e/mimi-memo-0.0.0-arm64.dmg"
+              }
+              download
+              className="w-1/2 lg:w-50 flex justify-center items-center gap-2"
+            >
               <MacIcon />
               Mac
-            </button>
+            </Link>
           </div>
         </div>
         <div className="relative md:w-[30vw] w-full flex justify-center items-center top-30 sm:top-0">
