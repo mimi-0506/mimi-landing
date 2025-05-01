@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     type: "website",
   },
   robots: "index, follow",
-  //   metadataBase: new URL("배포 도메인"),
+  metadataBase: new URL("https://mimi-landing.vercel.app/mimimemo"),
 };
 
 export default function Layout({
