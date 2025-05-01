@@ -21,7 +21,7 @@ export default function Page1() {
 
           <div className="flex mt-10 sm:mt-0 gap-5 fill-white text-xl">
             <Link
-              href=""
+              href="https://github.com/mimi-0506/mimi-memo/releases/download/1.0.0/mimimemo_window_1.0.0.exe"
               download
               className="w-1/2 lg:w-50 flex justify-center items-center gap-2"
             >
@@ -29,9 +29,7 @@ export default function Page1() {
               Window
             </Link>
             <Link
-              href={
-                "https://github.com/mimi-0506/mimi-memo/releases/download/untagged-964e41c7617929a6943e/mimi-memo-0.0.0-arm64.dmg"
-              }
+              href="https://github.com/mimi-0506/mimi-memo/releases/download/1.0.0/mimimemo_mac_1.0.0.dmg"
               download
               className="w-1/2 lg:w-50 flex justify-center items-center gap-2"
             >
