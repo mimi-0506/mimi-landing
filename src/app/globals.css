@@ -57,4 +57,11 @@
   .box-pink-shadow {
     box-shadow: 0 0 10px var(--color-lightMain);
   }
+
+  .fade-in-up {
+    @apply opacity-0 translate-y-4 transition-all duration-1500 ease-out;
+  }
+  .fade-in-up.show {
+    @apply opacity-100 translate-y-0;
+  }
 }

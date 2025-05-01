@@ -1,4 +1,8 @@
+"use client";
+
 import { songmyung } from "@/fonts";
+import { useInView } from "react-intersection-observer";
+import clsx from "clsx";
 
 const features = [
   {
@@ -36,13 +40,22 @@ const features = [
 const FeatureCard = ({
   title,
   description,
+  index,
+  inView,
 }: {
   title: string;
   description: string;
+  index: number;
+  inView: boolean;
 }) => {
   return (
-    <div className="rounded-xl text-left box-pink-shadow px-6 py-8 flex flex-col items-start gap-4">
-      {/* <Image src="/icon.svg" alt="icon" className="w-10 h-10" /> */}
+    <div
+      style={{ transitionDelay: `${index * 200}ms` }}
+      className={clsx(
+        "rounded-xl text-left box-pink-shadow px-6 py-8 flex flex-col items-start gap-4 fade-in-up",
+        inView && "show"
+      )}
+    >
       <h3 className={`${songmyung.className} text-xl font-semibold`}>
         {title}
       </h3>
@@ -52,6 +65,11 @@ const FeatureCard = ({
 };
 
 export default function Page2() {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+
   return (
     <div className="w-full min-h-screen flex flex-col justify-start items-center text-center">
       <h2 className={`${songmyung.className} text-2xl tracking-wider`}>
@@ -63,13 +81,18 @@ export default function Page2() {
         원하는 기능이 있다면 제일 하단의 메일 주소로 연락하세요!
       </p>
 
-      <section className="w-full px-3 lg:px-6 py-16 max-w-6xl mx-auto text-center ">
+      <section
+        ref={ref}
+        className="w-full px-3 lg:px-6 py-16 max-w-6xl mx-auto text-center "
+      >
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-8 mb-20">
           {features.map((f, idx) => (
             <FeatureCard
+              inView={inView}
               key={idx}
               title={f.title}
               description={f.description}
+              index={idx}
             />
           ))}
         </div>

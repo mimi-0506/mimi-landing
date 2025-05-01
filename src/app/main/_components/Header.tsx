@@ -35,16 +35,10 @@ export default function Header() {
       pt-3
       sm:pt-10
       md:mt-10
-      
       `}
     >
       <div className="flex items-center gap-2">
-        <Image
-          src="/mimimemo/icon.ico"
-          alt="Mimimemo Icon"
-          width={24}
-          height={24}
-        />
+        <Image src="/favicon.ico" alt="Mimimemo Icon" width={24} height={24} />
         <span className="text-xl tracking-tighter font-bold">MimiMemo</span>
       </div>
       <nav className="hidden md:block">
