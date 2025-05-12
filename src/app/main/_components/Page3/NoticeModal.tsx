@@ -1,7 +1,9 @@
 "use client";
 
 import { songmyung } from "@/fonts";
+import { addDoc, collection, doc } from "firebase/firestore";
 import { useRef, useState } from "react";
+import { db } from "../../../../../lib/firebase";
 
 export default function NoticeModal({
   handleModalClose,
@@ -13,7 +15,7 @@ export default function NoticeModal({
   const customDomainRef = useRef<HTMLInputElement>(null);
   const [useCustomDomain, setUseCustomDomain] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     const prefix = emailPrefixRef.current?.value ?? "";
@@ -27,7 +29,19 @@ export default function NoticeModal({
       document.querySelector('input[name="phone"]:checked') as HTMLInputElement
     )?.value;
 
-    console.log({ email, phone });
+    const payload = {
+      email,
+      phone,
+      timestamp: new Date().toISOString(),
+    };
+
+    try {
+      const noticeDocRef = doc(db, "landing", "notice");
+      const noticeEntriesRef = collection(noticeDocRef, "entries");
+      await addDoc(noticeEntriesRef, payload);
+    } catch (error) {
+      console.error("Failed to submit notice:", error);
+    }
     handleModalClose();
   };
 

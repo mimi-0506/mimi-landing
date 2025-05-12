@@ -3,16 +3,25 @@
 import { songmyung } from "@/fonts";
 import { useRef, useEffect } from "react";
 import { throttle } from "lodash";
+import { addDoc, collection, doc } from "firebase/firestore";
+import { db } from "../../../../../lib/firebase";
 
 const throttledSubmit = throttle(
-  (text: string, onClose: () => void) => {
+  async (text: string, onClose: () => void) => {
     if (!text.trim()) return;
 
     const payload = {
       text,
       timestamp: new Date().toISOString(),
     };
-    console.log(payload); //전송 로직 추가
+    try {
+      const ideaDocRef = doc(db, "landing", "idea");
+      const ideasCollectionRef = collection(ideaDocRef, "entries");
+      await addDoc(ideasCollectionRef, payload);
+      onClose();
+    } catch (error) {
+      console.error("Failed to submit idea:", error);
+    }
     onClose();
   },
   5000,
