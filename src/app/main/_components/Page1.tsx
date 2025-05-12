@@ -9,7 +9,7 @@ export default function Page1() {
     <div className="w-full min-h-screen flex items-center justify-center relative sm:-top-30">
       <div className="w-full flex flex-col-reverse sm:flex-row">
         <div className="w-full md:w-3/5 flex flex-col justify-center z-10 relative -top-20 sm:top-0 gap-5 sm:whitespace-nowrap">
-          <text className="text-glow">
+          <span className="text-glow">
             <h1 className={`${songmyung.className} text-4xl`}>MimiMemo</h1>
             <h2 className={`${songmyung.className} `}>
               당신에 의한, 당신을 위한.
@@ -19,7 +19,7 @@ export default function Page1() {
               집에서 데스크탑을 사용할 때도, 카페에서 맥북을 사용할 때도. <br />
               MimiMemo는 어디에서나 같은 상태 그대로 쓸 수 있습니다.
             </p>
-          </text>
+          </span>
           <div
             className={`${songmyung.className} flex mt-10 sm:mt-0 gap-5 fill-white text-white text-xl`}
           >
